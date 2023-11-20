@@ -1,28 +1,17 @@
 import React, {useState} from "react";
+import {View, Text, Button, StyleSheet} from "react-native";
 import MainLayout from "../layouts/MainLayout";
-import { Button } from "react-native";
-import ToDoForm from "../components/ToDoForm";
-import ToDoList from "../components/ToDoList";
 
-export default function HomeScreen ({ navigation }) {
-    const [tasks, setTasks] = useState([
-        'Do laundry',
-        'Go to gym',
-        'Walk dog',
-    ]);
-    
-    const addTask = (task) => {
-        setTasks([...tasks, task]);
-    };
-    
+export default function AboutScreen ({ navigation }) {
     return (
         <MainLayout>
-        <ToDoForm addTask={addTask} />
-        <ToDoList tasks={tasks} />
-        <Button
-            title="Go to About"
-            onPress={() => navigation.navigate('About')}
-        />
-        </MainLayout>);
-    }
-
+            <View style={styles.container}>
+                <Text style={styles.text}>Developed by Dominique Punzalan</Text>
+                <Button
+                    title="Go to Home"
+                    onPress={() => navigation.navigate('Home')}
+                />
+            </View>
+        </MainLayout>
+    );
+}
