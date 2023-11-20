@@ -5,7 +5,7 @@ import Header from './Header';
 export default function MainLayout({ children }) {
   return (
     <View style={styles.container}>
-      <Header title={title} />
+      <Header title={""} />
       <ScrollView>
         {children}
       </ScrollView>

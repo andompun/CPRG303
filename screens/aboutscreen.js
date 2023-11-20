@@ -5,8 +5,8 @@ import MainLayout from "../layouts/MainLayout";
 export default function AboutScreen ({ navigation }) {
     return (
         <MainLayout>
-            <View style={styles.container}>
-                <Text style={styles.text}>Developed by Dominique Punzalan</Text>
+            <View>
+                <Text>Developed by Dominique Punzalan</Text>
                 <Button
                     title="Go to Home"
                     onPress={() => navigation.navigate('Home')}
