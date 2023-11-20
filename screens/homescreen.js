@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import MainLayout from "../layouts/MainLayout";
-import { Button } from "react-native";
+import { Button, StyleSheet } from "react-native";
 import ToDoForm from "../components/ToDoForm";
 import ToDoList from "../components/ToDoList";
 
@@ -26,3 +26,9 @@ export default function HomeScreen ({ navigation }) {
         </MainLayout>);
     };
 
+    const styles = StyleSheet.create({
+        container: {
+          flex: 1,
+          padding: 20,
+        },
+      });
